@@ -9,13 +9,16 @@ url="http://wiki.ros.org/franka_hw"
 license=('Apache 2.0')
 
 makedepends=(
-
-
+'cmake'
 )
 
 depends=(
-
-
+'ros-melodic-controller-interface'
+'ros-melodic-hardware-interface'
+'ros-melodic-joint-limits-interface'
+'ros-melodic-libfranka'
+'ros-melodic-roscpp'
+'ros-melodic-urdf'
 )
 
 provides=($pkgname)
