@@ -6,18 +6,28 @@ arch=('i686' 'x86_64' 'aarch64' 'armv7h' 'armv6h')
 url="http://wiki.ros.org/franka_hw"
 license=('Apache 2.0')
 
-makedepends=(
-'cmake'
+ros_makedepends=(
 'ros-melodic-rostest'
+'ros-melodic-catkin'
 )
 
-depends=(
+makedepends=(
+'cmake'
+'ros-build-tools'
+${ros_makedepends[@]}
+)
+
+ros_depends=(
 'ros-melodic-controller-interface'
 'ros-melodic-hardware-interface'
 'ros-melodic-joint-limits-interface'
 'ros-melodic-libfranka'
 'ros-melodic-roscpp'
 'ros-melodic-urdf'
+)
+
+depends=(
+${ros_depends[@]}
 )
 
 provides=($pkgname)
